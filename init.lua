@@ -37,3 +37,22 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+-- doesn't belong here
+local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+
+parser_config.nextflow = {
+  install_info = {
+    --url = "https://github.com/matthuska/tree-sitter-nextflow",
+    url = "~/src/tree-sitter-nextflow",
+    files = { "src/parser.c" },
+    --branch = "main",
+  }
+}
+
+-- Nextflow
+vim.filetype.add({
+  extension = {
+    nf = 'nextflow',
+  },
+})
