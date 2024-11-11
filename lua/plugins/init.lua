@@ -1,4 +1,7 @@
 return {
+  -- I hate autopairs so much
+  { "windwp/nvim-autopairs",  enabled = false },
+
   {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
